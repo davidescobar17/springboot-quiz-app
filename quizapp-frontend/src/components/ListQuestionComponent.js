@@ -40,10 +40,12 @@ const ListQuestionComponent = () => {
 
             <table className="table table-bordered table-striped">
                 <thead>
-                    <th> Id </th>
-                    <th> Question </th>
-                    <th> Answer </th>
-                    <th> Actions </th>
+                    <tr>
+                        <th> Id </th>
+                        <th> Question </th>
+                        <th> Answer </th>
+                        <th> Actions </th>
+                    </tr>
                 </thead>
                 <tbody>
                     {
@@ -52,12 +54,12 @@ const ListQuestionComponent = () => {
                             <tr key = {question.id}> 
                                 <td> {question.id} </td>
                                 <td> {question.question} </td>
-                                <td>{question.answer}</td>
+                                <td> {question.answer} </td>
                                 <td>
-                                    <div class="container d-flex">
-                                    <Link className="btn btn-info" to={`/edit-question/${question.id}`} >Update</Link>
-                                    <button className = "btn btn-danger" onClick = {() => deleteQuestion(question.id)}
-                                    style = {{marginLeft:"10px"}}>Delete</button>
+                                    <div className = "container d-flex">
+                                        <Link className = "btn btn-info" to = {`/edit-question/${question.id}`} > Update </Link>
+                                        <button className = "btn btn-danger" onClick = {() => deleteQuestion(question.id)}
+                                            style = {{marginLeft:"10px"}}> Delete </button>
                                     </div>
                                 </td>
                             </tr>
