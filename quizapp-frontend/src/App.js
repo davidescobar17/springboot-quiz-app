@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import FooterComponent from './components/FooterComponent';
 import HeaderComponent from './components/HeaderComponent';
 import ListQuestionComponent from './components/ListQuestionComponent';
@@ -13,13 +13,13 @@ function App() {
       <Router>
         <HeaderComponent />
         <div className= "container">
-          <Switch>
-            <Route exact path = "/" component = {HomePagePromptComponent}></Route>
-            <Route path = "/questions" component = {ListQuestionComponent}></Route>
-            <Route path = "/add-question" component = {AddQuestionComponent} ></Route>
-            <Route path = "/edit-question/:id" component = {AddQuestionComponent}></Route>
-            <Route path = "/test" component = {TestComponent}></Route>
-          </Switch>
+          <Routes>
+            <Route exact path = "/" element = {<HomePagePromptComponent />}></Route>
+            <Route path = "/questions" element = {<ListQuestionComponent />}></Route>
+            <Route path = "/add-question" element = {<AddQuestionComponent />} ></Route>
+            <Route path = "/edit-question/:id" element = {<AddQuestionComponent />}></Route>
+            <Route path = "/test" element = {<TestComponent />}></Route>
+          </Routes>
         </div>
         <FooterComponent />
         </Router>
