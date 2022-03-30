@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 const FooterComponent = () => {
   return (
     <div>
-      <footer className = "footer">
+      <footer className="footer">
       </footer>
     </div>
   )

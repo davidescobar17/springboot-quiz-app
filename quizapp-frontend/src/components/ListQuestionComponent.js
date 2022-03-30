@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react'
-import { Link } from 'react-router-dom'
-import QuestionService from '../services/QuestionService'
+import React, {useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
+import QuestionService from '../services/QuestionService';
 
 const ListQuestionComponent = () => {
 
@@ -14,7 +14,7 @@ const ListQuestionComponent = () => {
   const getAllQuestions = () => {
     
     QuestionService.getAllQuestions().then((response) => {
-      setQuestions(response.data)
+      setQuestions(response.data);
       console.log(response.data);
     }).catch(error =>{
       console.log(error);
@@ -24,20 +24,19 @@ const ListQuestionComponent = () => {
   const deleteQuestion = (questionId) => {
 
     QuestionService.deleteQuestion(questionId).then((response) =>{
-    getAllQuestions();
-
-     }).catch(error =>{
-       console.log(error);
-     })
+      getAllQuestions();
+    }).catch(error =>{
+      console.log(error);
+    })
   }
 
   return (
-    <div className = "container m-5">
+    <div className="container m-5">
 
-      <h1 className = "text-center"> Manage Questions </h1>
+      <h1 className="text-center"> Manage Questions </h1>
       
-      <div className = "container d-flex mt-3 mb-2" style={{justifyContent:'center'}}>
-        <Link to = "/add-question" className = "btn btn-primary mb-2" > Add question </Link>
+      <div className="container d-flex mt-3 mb-2" style={{justifyContent: 'center'}}>
+        <Link to="/add-question" className="btn btn-primary mb-2"> Add question </Link>
       </div>
 
       <table className="table table-bordered table-striped">
@@ -52,14 +51,14 @@ const ListQuestionComponent = () => {
           {
             questions.map(
               question =>
-              <tr key = {question.id}> 
+              <tr key={question.id}> 
                 <td> {question.question} </td>
                 <td> {question.answer} </td>
                 <td>
-                  <div className = "container d-flex">
-                    <Link className = "btn btn-info" to = {`/edit-question/${question.id}`} > Update </Link>
-                    <button className = "btn btn-danger" onClick = {() => deleteQuestion(question.id)}
-                      style = {{marginLeft:"10px"}}> Delete </button>
+                  <div className="container d-flex">
+                    <Link className="btn btn-info" to={`/edit-question/${question.id}`}> Update </Link>
+                    <button className="btn btn-danger" onClick={() => deleteQuestion(question.id)}
+                      style={{marginLeft: '10px'}}> Delete </button>
                   </div>
                 </td>
               </tr>
