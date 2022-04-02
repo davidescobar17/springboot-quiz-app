@@ -5,11 +5,11 @@ Quiz application that supports CRUD operations for questions with answers and te
 ## Demo
 ### Adding, updating and deleting questions
 
-![demo-crud](./quizapp-frontend/demo/demo-crud.gif)
+![demo-crud](./demo/demo-crud.gif)
 
 ### Quiz
 
-![demo-quiz](./quizapp-frontend/demo/demo-quiz.gif)
+![demo-quiz](./demo/demo-quiz.gif)
 
 ## Built With
   - React.js
