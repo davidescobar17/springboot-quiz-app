@@ -31,7 +31,7 @@ const ListQuestionComponent = () => {
   }
 
   return (
-    <div className="container m-5">
+    <div className="container w-75">
 
       <h1 className="text-center"> Manage Questions </h1>
       
@@ -55,7 +55,7 @@ const ListQuestionComponent = () => {
                 <td> {question.question} </td>
                 <td> {question.answer} </td>
                 <td>
-                  <div className="container d-flex">
+                  <div className="container d-flex justify-content-center">
                     <Link className="btn btn-info" to={`/edit-question/${question.id}`}> Update </Link>
                     <button className="btn btn-danger" onClick={() => deleteQuestion(question.id)}
                       style={{marginLeft: '10px'}}> Delete </button>

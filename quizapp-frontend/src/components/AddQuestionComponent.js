@@ -54,11 +54,11 @@ const AddQuestionComponent = () => {
   }
 
   return (
-    <div>
+    <div className="app">
        <br /><br />
-       <div className="container">
+       <div className="container w-50">
         <div className="row">
-          <div className="card col-md-6 offset-md-3 offset-md-3">
+          <div className="card">
              
             <div className="card-body">
               {
@@ -91,7 +91,7 @@ const AddQuestionComponent = () => {
                   </input>
                 </div>
 
-                <div clasNames="d-flex mt-3" style={{justifyContent: 'center'}}>
+                <div className="d-flex mt-3" style={{justifyContent: 'center'}}>
                   <button className="btn btn-success mx-2" onClick={(e) => saveOrUpdateQuestion(e)} >Submit </button>
                   <Link to="/questions" className="btn btn-danger mx-2"> Cancel </Link>
                 </div>

@@ -9,10 +9,10 @@ import TestComponent from './components/TestComponent';
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Router>
         <HeaderComponent />
-        <div className= "container">
+        <div className="container">
           <Routes>
             <Route exact path = "/" element = {<HomePagePromptComponent />}></Route>
             <Route path = "/questions" element = {<ListQuestionComponent />}></Route>

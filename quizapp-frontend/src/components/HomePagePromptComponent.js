@@ -23,9 +23,9 @@ const ListQuestionComponent = () => {
 
   return (
     <div className="container vertical-center">
-      <div className="jumbotron m-5">
+      <div className="jumbotron">
         <h1 className="text-center display-1"> Test your knowledge </h1>
-        <div className="text-center m-5">
+        <div className="text-center">
           <Link to="/questions" className="btn btn-primary mx-2"> Manage questions </Link>
           <Link to="/test" state={{questions: questions}} className="btn btn-primary mx-2"> Test myself </Link>
         </div>
